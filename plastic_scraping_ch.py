@@ -18,8 +18,7 @@ def scrape_all():
     data = {
         "news_title": news_title,
         "news_paragraph": news_paragraph,
-        "featured_image": nyt_plastic(browser),
-        "facts": plastic_facts(),
+        "nyt_news": nyt_plastic(browser),
         "last_modified": dt.datetime.now()
     }
 
@@ -34,7 +33,7 @@ def plastic_news(browser):
     browser.visit(url)
 
 # Optional delay for loading the page
-    browser.is_element_present_by_css('div.list_text', wait_time=1)
+    browser.is_element_present_by_css('div.text-content', wait_time=1)
 
     # Convert the browser html to a soup object and then quit the browser
     html = browser.html
@@ -46,7 +45,7 @@ def plastic_news(browser):
     # <p class="css-1o3qgj6 e15dqdia8">One of the most analytically robust studies produced on ocean plastics.</p></div>
     
     try:
-        slide_elem = news_soup.select_one('div.list_text')
+        slide_elem = news_soup.select_one('div.text-content')
         # Use the parent element to find the first 'a' tag and save it as 'news_title'
         news_title = slide_elem.find('div', class_="tile-title css-rmwpnv e15dqdia11").get_text()
         # Use the parent element to find the paragraph text
@@ -78,7 +77,7 @@ def nyt_plastic(browser):
     nyt_soup = soup(html, 'html.parser')
 
     # Optional delay for loading the page
-    browser.is_element_present_by_css('div.list_text', wait_time=1)
+    browser.is_element_present_by_css('div.text-content', wait_time=1)
 
     # Convert the browser html to a soup object and then quit the browser
     html = browser.html
@@ -108,50 +107,6 @@ def nyt_plastic(browser):
         return None, None, None, None
 
     return nyt_title, nyt_paragraph, nyt_title_2, nyt_paragraph_2 
-   
-  
-def plastic_facts():
-    # Add try/except for error handling
-    try:
-        # Use 'read_html' to scrape the facts table into a dataframe
-        df = pd.read_html('https://data-class-mars-facts.s3.amazonaws.com/Mars_Facts/index.html')[0]
-
-    except BaseException:
-        return None
-
-    # Assign columns and set index of dataframe
-    df.columns=['Description', 'Mars', 'Earth']
-    df.set_index('Description', inplace=True)
-
-    # Convert dataframe into HTML format, add bootstrap
-    return df.to_html(classes="table table-responsive")
-
-def mars_hemispheres(browser):
-    # Visit url
-    url = 'https://marshemispheres.com/'
-    browser.visit(url)
-
-    # Create list to hold dictionaries
-    hemisphere_image_urls = []
-    try:
-        # loop through mars hemispheres and retrieve full size image and title 
-        for i in range (0,4):
-            hemispheres = {}
-            full_img = browser.find_by_tag('h3')[i]
-            full_img.click()
-            html = browser.html
-            mars_soup = soup(html, 'html.parser')
-            full_img_link = browser.links.find_by_text('Sample').first
-            img_title = mars_soup.find('h2', class_='title').get_text()
-            hemispheres['img_url'] = full_img_link['href']
-            hemispheres['title'] = img_title
-            hemisphere_image_urls.append(hemispheres)
-            browser.back() 
-    
-    except AttributeError:
-        return None
-
-    return hemisphere_image_urls
 
 if __name__ == "__main__":
 
