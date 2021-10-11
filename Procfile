@@ -1,1 +1,1 @@
-  web: gunicorn ocean_plastic_webscraper.app:app
+ web: gunicorn app.app:app
