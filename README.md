@@ -27,7 +27,19 @@ The purpose of this project is to collect and display information spread across 
 5. Bootstrap - Bootstrap framework and its components have been used to build a flexible, mobile responsive web application. 
 6. CSS - Stylesheets have been used to design the appearance of the web application.
 
+## Application Design:
 
+The following diagram illustrates the architecture and working of the web application.
 
+![design](screenshots/design.png)
+
+## Application Snapshot:
+
+The following is an image of the developed web application.
+
+![webapp](screenshots/webapp.png)
+
+## Project learnings and Challenges:
+## Recommendations for Future:
 
 
