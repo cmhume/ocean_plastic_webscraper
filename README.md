@@ -39,7 +39,15 @@ The following is an image of the developed web application.
 
 ![webapp](screenshots/webapp.png)
 
-## Project learnings and Challenges:
-## Recommendations for Future:
+## Project Learnings and Challenges:
 
+1. The web page takes a little while to load and display the data after scraping.
+2. It was discovered that Newspaper3K library was a better tool to scrape articles from the web rather than Beautiful Soup. (Corinne to add)
+3. Certain websites (such as LinkedIn) did not return the required results due to the design of the source websites and hence were removed from the preferred datasources.
+
+## Recommendations for Future:
+1. Explore webscraping and generating results using Beautiful Soup and  Selenium.
+2. Explore webscraping and generating accurate results from websites that redirect to a different page (such as LinkedIn and WWF)
+3. Explore ways to scrape data from PDFs on the web.
+4. Adding a News feed on the page.
 
