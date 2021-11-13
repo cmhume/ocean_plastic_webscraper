@@ -1,2 +1,17 @@
 # ocean_plastic_webscraper
-In this project we are creating a web scraping app to search for recent news on ocean plastic pollution from multiple websites.
+
+## Overview: 
+
+
+## Newspaper3k
+
+
+## NewsAPI
+
+
+## NYT API
+
+
+## Scraping data from html tables
+
+
