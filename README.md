@@ -52,7 +52,7 @@ The following is an image of the developed web application.
 ## Alternate Web Scraping Methods:
 
 
-We used a google colab notebook to test different methods of webscraping. The google colab notebook is available [here]( https://github.com/cmhume/ocean_plastic_webscraper/blob/93e065bfd33493f98eb600466b23fd544823ca08/scraping_draft_cmh.ipynb)
+We used a google colab notebook to test different methods of webscraping. The google colab notebook is available [here]( https://github.com/cmhume/ocean_plastic_webscraper/blob/93e065bfd33493f98eb600466b23fd544823ca08/scraping_draft_cmh.ipynb) and [here](https://drive.google.com/file/d/1VoPQvdVCFOVKXiej_jaZ2eq2w6RXq-aY/view?usp=sharing).
 
 ### First Steps:
 
