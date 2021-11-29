@@ -1,5 +1,21 @@
 # Ocean Plastic Pollution Webscraping Project
 
+
+## Contributors:
+
+
+Neeraja Jayaraman-[GitHub](https://github.com/Njraman), [Branch](https://github.com/cmhume/ocean_plastic_webscraper/tree/Neeraja)
+
+
+Corinne Hume-[GitHub](https://github.com/cmhume), [Branch](https://github.com/cmhume/ocean_plastic_webscraper/tree/Corinne)
+
+
+Manupriya Sharma-[GitHub](https://github.com/Manupriya1), [Branch](https://github.com/cmhume/ocean_plastic_webscraper)
+
+
+Elaine Ng-[GitHub](https://github.com/ElaineNg94), [Branch](https://github.com/cmhume/ocean_plastic_webscraper/tree/Elaine-tableau)
+
+
 ## Overview:
 
 In this project, we created a webscraping app using Flask to search for recent news articles on ocean plastic pollution.  The project provides background research for a California Benefit Corporation that pioneers in plastic offsets and saving the oceans from plastic pollution.  In addition, we compared the accuracy of results and ease of use for different web scraping libraries and methods.  The different webscraping methods can be seen here in our webscraping google colab notebook.  Our final web application used the Newspaper3k python library for webscraping. 
