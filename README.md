@@ -55,7 +55,7 @@ The following is an image of the developed web application.
 ### First Steps:
 
 
-1.  Check robots.txt files for each website to see if web scraping is allowed.  This is done by adding /robots.txt to the main web page address like so:
+First we checked the robots.txt files for each website to see if web scraping was allowed.  This was done by adding /robots.txt to the main web page address like so:
 
 
 https://www.un.org/robots.txt
@@ -76,7 +76,7 @@ https://ellenmacarthurfoundation.org/robots.txt
 https://www.nytimes.com/robots.txt
 
 
-* With the robots.txt files we discovered the New York Times prefers web scrapers to use rss feeds and REST APIs for article information and LinkedIn does not like most types of web scraping.
+With the robots.txt files we discovered the New York Times prefers web scrapers to use rss feeds and REST APIs for article information and LinkedIn does not like most types of web scraping.
 
 
 ### APIs
@@ -126,7 +126,7 @@ NewsApi is a great resource for personal use.  It is easy to use and change sear
 2. Explore webscraping and generating accurate results from websites that redirect to a different page (such as LinkedIn and WWF)
 3. Explore ways to scrape data from PDFs on the web.
 4. Adding a News feed on the page.
-5
+
 
 
 
