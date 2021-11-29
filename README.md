@@ -103,7 +103,7 @@ The final table of our results was as follows:
 After creating an account and registering an App on developer.nytimes.com, we added an API key and enabled the Article Search and RSS feed APIs to our App.  We used the following code to retrieve article search results in JSON format, search criteria are after the 'q=' in the url:
 
 
-![nyt_api](https://user-images.githubusercontent.com/78699521/143921460-7a4d191a-0455-4754-9f2e-e33922dc5213.png)
+![nyt_api](https://user-images.githubusercontent.com/78699521/143924682-5c2fa799-5918-4d00-9717-facdc87ed232.png)
 
 
 The NYT JSON output had a lot more nested metadata than the previous NewsAPI and was a little harder to parse through, our final dataframe was simplified to just show the article abstract and link as shown below:
