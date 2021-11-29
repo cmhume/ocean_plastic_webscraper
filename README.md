@@ -31,13 +31,16 @@ The purpose of this project is to collect and display information from multiple 
 
 The following diagram illustrates the architecture and working of the web application.
 
-![design](screenshots/design.png)
+
+<img width="1097" alt="design" src="https://user-images.githubusercontent.com/78699521/143925266-cb4dd99b-1d36-4d1e-b695-801bd8a1ce23.png">
+
 
 ## Application Snapshot:
 
 The following is an image of the developed web application.
 
-![webapp](screenshots/webapp.png)
+<img width="1439" alt="webapp" src="https://user-images.githubusercontent.com/78699521/143925079-98564677-2dad-423e-845c-8ce75afcd289.png">
+
 
 ## Project Learnings and Challenges:
 
