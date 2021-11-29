@@ -46,7 +46,7 @@ The following is an image of the developed web application.
 
 1. The web page takes a little while to load and display the data after scraping.
 2. We decided on using the Newspaper3k library for it's ease of use and ability to add websites without needing to change the web scraping code.
-3. Certain websites (such as LinkedIn) did not return the required results due to the design of the source websites and were removed from the preferred datasources.
+3. Certain websites (such as LinkedIn) did not return relevant results due to the design of the source websites and were removed as datasources.
 
 
 ## Alternate Web Scraping Methods:
