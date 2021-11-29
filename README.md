@@ -45,11 +45,85 @@ The following is an image of the developed web application.
 2. We decided on using the Newspaper3k library for it's ease of use and ability to add websites without needing to change the web scraping code.
 3. Certain websites (such as LinkedIn) did not return the required results due to the design of the source websites and were removed from the preferred datasources.
 
+
+## Alternate Web Scraping Methods:
+
+
+### First Steps:
+
+
+1.  Check robots.txt files for each website to see if web scraping is allowed.  This is done by adding /robots.txt to the main web page address like so:
+
+
+https://www.un.org/robots.txt
+
+
+https://www.worldwildlife.org/robots.txt
+
+
+https://oceanconservancy.org/robots.txt
+
+
+https://www.linkedin.com/robots.txt
+
+
+https://ellenmacarthurfoundation.org/robots.txt
+
+
+https://www.nytimes.com/robots.txt
+
+
+* With the robots.txt files we discovered the New York Times prefers web scrapers to use rss feeds and REST APIs for article information and LinkedIn does not like most types of web scraping.
+
+
+### APIs
+
+
+#### NewsAPI: https://newsapi.org/
+
+
+We used the free developer version of NewsAPI, a JSON API service that searches multiple news sources from across the web.  After creating an API key we used the following code to search for articles about ocean plastic:
+
+
+![news_api](https://user-images.githubusercontent.com/78699521/143921707-a6d52ad3-379a-455e-9c6b-b62b89902dff.png)
+
+
+
+Search criteria is placed in the parameters' "q" section.  Details for using NewsAPI can be found on their website and information on using the python NewsAPI library is available here: https://github.com/mattlisiv/newsapi-python
+
+
+The final table of our results was as follows:
+
+
+![news_api_df](https://user-images.githubusercontent.com/78699521/143921657-91cb4c13-b33d-4099-9511-103f70541161.png)
+
+
+#### New York Times API: https://developer.nytimes.com/apis
+
+After creating an account and registering an App on developer.nytimes.com, we added an API key and enabled the Article Search and RSS feed APIs to our App.  We used the following code to retrieve article search results in JSON format, search criteria are after the 'q=' in the url:
+
+
+![nyt_api](https://user-images.githubusercontent.com/78699521/143921460-7a4d191a-0455-4754-9f2e-e33922dc5213.png)
+
+
+The NYT JSON output had a lot more nested metadata than the previous NewsAPI and was a little harder to parse through, our final dataframe was simplified to just show the article abstract and link as shown below:
+
+
+![nyt_df](https://user-images.githubusercontent.com/78699521/143922578-cbc7065d-5922-4652-bb7b-17e4b047bb49.png)
+
+
+### API Conclusions
+
+
+NewsApi is a great resource for personal use.  It is easy to use and change search criteria and provided interesting results from news sources from around the world.  For business use, NewsAPI is quite expensive especially for small businesses.  The New York Times API had so much nested metadata it was hard to parse through and printing out the JSON results took up a lot of space.  The information about word count, rank, and keywords the JSON output contained could be used in an analysis about news article features.  There may be a simpler way to parse through the New York Times API of which we are not aware.
+
+
 ## Recommendations for Future:
 1. Explore webscraping and generating results using Beautiful Soup and  Selenium.
 2. Explore webscraping and generating accurate results from websites that redirect to a different page (such as LinkedIn and WWF)
 3. Explore ways to scrape data from PDFs on the web.
 4. Adding a News feed on the page.
+5
 
 
 
