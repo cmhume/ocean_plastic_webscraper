@@ -173,14 +173,30 @@ There are many ways to scrape html tables, we used the simplest method that can 
 ## Creating a News Feed 
 
 
-We created an RSS news feed with https://rss.app/.  We used the free developer version of this service and created our own RSS feed from a recycling news website.
+We created an RSS news feed with https://rss.app/.  We used the free developer version of this service and created our own RSS feed from phys.org.
 The free version can create two news feeds, allowing one to be used per webpage.  The paid versions allow multiple newsfeeds and the combination of news sources per feed. 
+
+Widget code:
+
+
+<rssapp-carousel id="9ypTyOvk8q9e0DZM"></rssapp-carousel><script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
+
+
 
 
 ## Recommendations for Future:
 1. Explore webscraping and generating results using Beautiful Soup and  Selenium.
 2. Explore webscraping and generating accurate results from websites that redirect to a different page (such as LinkedIn and WWF)
 
+
+## Websites for future scraping:
+1.  https://resource-recycling.com/plastics/?s=ocean+plastic&search=Search
+2.  https://www.plasticstoday.com/search/node/ocean%20plastic
+3.  https://www.recyclingtoday.com/search/?searchTerm=ocean%252520plastic&searchOrderBy=relevancy
+4.  https://www.plasteurope.com/news/results.asp?q=ocean+plastic&x=0&y=0
+5.  https://cen.acs.org/search.html?q=ocean+plastic&sortBy=date&rpp=10&startYear=2021&startMonth=03&startDay=01&endYear=2021&endMonth=12&endDay=02&topics=all
+6.  https://www.nytimes.com/search?dropmab=false&endDate=20211202&query=ocean%20plastic&sort=best&startDate=20201202
+7.  https://www.science.org/action/doSearch?AllField=ocean+plastic&adobe_mc=MCMID%3D58204404720368725761314746926917575941%7CMCORGID%3D242B6472541199F70A4C98A6%2540AdobeOrg%7CTS%3D1638494353&startPage=0&sortBy=recency&adobe_mc=MCMID%3D58204404720368725761314746926917575941%7CMCORGID%3D242B6472541199F70A4C98A6%2540AdobeOrg%7CTS%3D1638494364
 
 
 
