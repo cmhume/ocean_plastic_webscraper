@@ -18,11 +18,11 @@ Elaine Ng-[GitHub](https://github.com/ElaineNg94), [Branch](https://github.com/c
 
 ## Overview:
 
-In this project, we created a webscraping app using Flask to search for recent news articles on ocean plastic pollution.  The project provides background research for a California Benefit Corporation that pioneers in plastic offsets and saving the oceans from plastic pollution.  In addition, we compared the accuracy of results and ease of use for different web scraping libraries and methods.  The different webscraping methods can be seen here in our webscraping google colab notebook.  Our final web application used the Newspaper3k python library for webscraping. 
+In this project, we created a webscraping app using Flask to search for recent news articles on ocean plastic pollution.  The project provides background research for a California Benefit Corporation that pioneers in plastic offsets and reducing ocean plastic pollution.  In addition, we compared the accuracy of results and ease of use for different web scraping libraries and methods.  The different webscraping methods can be seen [here]( https://github.com/cmhume/ocean_plastic_webscraper/blob/93e065bfd33493f98eb600466b23fd544823ca08/scraping_draft_cmh.ipynb) in our webscraping google colab notebook.  Our final web application used the Newspaper3k python library for webscraping. 
 
 ## Sources of Data:
 
-The following websites have been used as sources for scraping plastic pollution related news:
+The following websites were used as sources for scraping plastic pollution related news:
 
 
 1. https://news.un.org/
@@ -139,11 +139,48 @@ The NYT JSON output had a lot more nested metadata than the previous NewsAPI and
 NewsApi is a great resource for personal use.  It is easy to use and change search criteria and provided interesting results from news sources from around the world.  For business use, NewsAPI is quite expensive especially for small businesses.  The New York Times API had so much nested metadata it was hard to parse through and printing out the JSON results took up a lot of space.  The information about word count, rank, and keywords the JSON output contained could be used in an analysis about news article features.  There may be a simpler way to parse through the New York Times API of which we are not aware.
 
 
+## Scraping data tables from websites
+
+
+Three types of tables were scraped, an iframe table embedded in the html, a normal html table, and a table in a pdf document.
+
+
+### Iframe table
+
+
+To scrape the iframe table we used devops to inspect the page's html and found the link to the iframe table.  We then used this link to scrape data from as shown below:
+
+
+
+### HTML table
+
+
+We used the following method to scrape data and save it as a csv file:
+
+
+### PDF table
+
+
+We use the tabula library to scrape tables found in a pdf document.  The method is shown below:
+
+
+### Scraping Tables: Conclusions
+
+
+There are many ways to scrape html tables, we used the simplest method that can be used on most webpages without modifing the code.  Iframe tables aren't picked up with the simple method but can be scraped by visiting the source for the iframe which can be found when inspecting the html of the webpage.  The tabula library is easy to use but does not always pick up every table in a pdf document.  The results from using tabula need to be checked and cleaned after exporting as csv files, some tables are split into multiple files.
+
+
+## Creating a News Feed 
+
+
+We created an RSS news feed with https://rss.app/.  We used the free developer version of this service and created our own RSS feed from a recycling news website.
+The free version can create two news feeds, allowing one to be used per webpage.  The paid versions allow multiple newsfeeds and the combination of news sources per feed. 
+
+
 ## Recommendations for Future:
 1. Explore webscraping and generating results using Beautiful Soup and  Selenium.
 2. Explore webscraping and generating accurate results from websites that redirect to a different page (such as LinkedIn and WWF)
-3. Explore ways to scrape data from PDFs on the web.
-4. Adding a News feed on the page.
+
 
 
 
