@@ -167,13 +167,24 @@ We used the following method to scrape data and save it as a csv file:
 ### PDF table
 
 
-We use the tabula library to scrape tables found in a pdf document.  The method is shown below:
+We use the tabula library to scrape tables found in a pdf document.  The basic method is shown below:
+
+
+!pip install tabula-py
+# Import Dependencies
+import tabula
+import os
+# read PDF file
+tables = tabula.read_pdf("/content/Brooks_aat0131_SM_L1.pdf", pages="all", output_format="dataframe", stream=True)
+
+
+An excellent tutorial on using Tabula can be found [here](https://github.com/alod83/data-science/tree/master/DataCollection/PDF)
 
 
 ### Scraping Tables: Conclusions
 
 
-There are many ways to scrape html tables, we used the simplest method that can be used on most webpages without modifing the code.  Iframe tables aren't picked up with the simple method but can be scraped by visiting the source for the iframe which can be found when inspecting the html of the webpage.  The tabula library is easy to use but does not always pick up every table in a pdf document.  The results from using tabula need to be checked and cleaned after exporting as csv files, some tables are split into multiple files.
+There are many ways to scrape html tables, we used the simplest method that can be used on most webpages without modifing the code.  Iframe tables are not picked up when looking for the "table" html tags, but can be scraped by visiting the source for the iframe found when inspecting the html of the webpage.  The tabula library is easy to use but does not always pick up every table in a pdf document.  The results from using tabula need to be checked and cleaned after exporting as csv files, some tables are split into multiple files.
 
 
 ## Creating a News Feed 
