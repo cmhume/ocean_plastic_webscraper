@@ -148,7 +148,10 @@ Three types of tables were scraped, an iframe table embedded in the html, a norm
 ### Iframe table
 
 
-To scrape the iframe table we used devops to inspect the page's html and found the link to the iframe table.  We then used this link to scrape data from as shown below:
+To scrape the iframe table we used devops to inspect the page's html and found the link to the iframe table.  We then used this link to scrape data from the document link as shown in the dataframe below:
+
+
+![iframe_df](https://user-images.githubusercontent.com/78699521/144690792-96a4d10e-f61b-4d5f-a17c-20447b0f60e2.png)
 
 
 
@@ -156,6 +159,9 @@ To scrape the iframe table we used devops to inspect the page's html and found t
 
 
 We used the following method to scrape data and save it as a csv file:
+
+
+![html_table](https://user-images.githubusercontent.com/78699521/144690522-682adf0a-be30-47f4-a342-868ae5be5ece.png)
 
 
 ### PDF table
@@ -173,15 +179,41 @@ There are many ways to scrape html tables, we used the simplest method that can 
 ## Creating a News Feed 
 
 
-We created an RSS news feed with https://rss.app/.  We used the free developer version of this service and created our own RSS feed from phys.org.
+We created an RSS news feed with https://rss.app/.  We used the free developer version of this service and created our own RSS feed from the following websites:
+
+https://www.nature.com/search?q=ocean%20plastic&order=relevance&date_range=2021-2021
+
+https://phys.org/search/?search=ocean+plastic&s=1
+
+
 The free version can create two news feeds, allowing one to be used per webpage.  The paid versions allow multiple newsfeeds and the combination of news sources per feed. 
 
-Widget code:
+Widget codes:
+
+Phys.org:
 
 
 <rssapp-carousel id="9ypTyOvk8q9e0DZM"></rssapp-carousel><script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
 
 
+Nature:
+
+<rssapp-carousel id="CuCIHXEP9XYrg5yK"></rssapp-carousel><script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
+
+
+In addition to news feeds, rss.app also can be used to send an e-mail digest 
+
+
+## Creating a Google News Alert and RSS Feed
+
+
+We created a Google Search RSS feed shown below:
+
+
+https://news.google.com/rss/search?q=ocean%20plastic&hl=en-US&gl=US&ceid=US%3Aen
+
+
+This feed can be easily changed for any search results by changing the keywords after q= in the url above.
 
 
 ## Recommendations for Future:
@@ -189,14 +221,7 @@ Widget code:
 2. Explore webscraping and generating accurate results from websites that redirect to a different page (such as LinkedIn and WWF)
 
 
-## Websites for future scraping:
-1.  https://resource-recycling.com/plastics/?s=ocean+plastic&search=Search
-2.  https://www.plasticstoday.com/search/node/ocean%20plastic
-3.  https://www.recyclingtoday.com/search/?searchTerm=ocean%252520plastic&searchOrderBy=relevancy
-4.  https://www.plasteurope.com/news/results.asp?q=ocean+plastic&x=0&y=0
-5.  https://cen.acs.org/search.html?q=ocean+plastic&sortBy=date&rpp=10&startYear=2021&startMonth=03&startDay=01&endYear=2021&endMonth=12&endDay=02&topics=all
-6.  https://www.nytimes.com/search?dropmab=false&endDate=20211202&query=ocean%20plastic&sort=best&startDate=20201202
-7.  https://www.science.org/action/doSearch?AllField=ocean+plastic&adobe_mc=MCMID%3D58204404720368725761314746926917575941%7CMCORGID%3D242B6472541199F70A4C98A6%2540AdobeOrg%7CTS%3D1638494353&startPage=0&sortBy=recency&adobe_mc=MCMID%3D58204404720368725761314746926917575941%7CMCORGID%3D242B6472541199F70A4C98A6%2540AdobeOrg%7CTS%3D1638494364
+
 
 
 
