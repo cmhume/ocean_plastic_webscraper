@@ -211,9 +211,17 @@ Phys.org:
 <rssapp-carousel id="9ypTyOvk8q9e0DZM"></rssapp-carousel><script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
 
 
+![phys_feed](https://user-images.githubusercontent.com/78699521/144693510-68089a29-4190-4dda-ab06-89d6a139fce8.png)
+
+
+
 Nature:
 
 <rssapp-carousel id="CuCIHXEP9XYrg5yK"></rssapp-carousel><script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
+
+
+![nat_feed](https://user-images.githubusercontent.com/78699521/144693518-f208a57c-18ef-40fe-aba4-d172f270f555.png)
+
 
 
 In addition to news feeds, rss.app also can be used to send an e-mail digest 
@@ -231,9 +239,9 @@ https://news.google.com/rss/search?q=ocean%20plastic&hl=en-US&gl=US&ceid=US%3Aen
 This feed can be easily changed for any search results by changing the keywords after q= in the url above.
 
 
-## Recommendations for Future:
-1. Explore webscraping and generating results using Beautiful Soup and  Selenium.
-2. Explore webscraping and generating accurate results from websites that redirect to a different page (such as LinkedIn and WWF)
+## Recommendations for the Future:
+1. Explore webscraping using Beautiful Soup and Selenium.
+2. Improve accuracy of results from scraping websites that redirect to a different page (such as LinkedIn and WWF)
 
 
 
