@@ -18,11 +18,11 @@ Elaine Ng-[GitHub](https://github.com/ElaineNg94), [Branch](https://github.com/c
 
 ## Overview:
 
-In this project, we created a webscraping app using Flask to search for recent news articles on ocean plastic pollution.  The project provides background research for a California Benefit Corporation that pioneers in plastic offsets and reducing ocean plastic pollution.  In addition, we compared the accuracy of results and ease of use for different web scraping libraries and methods.  The different webscraping methods can be seen [here]( https://github.com/cmhume/ocean_plastic_webscraper/blob/93e065bfd33493f98eb600466b23fd544823ca08/scraping_draft_cmh.ipynb) in our webscraping google colab notebook.  Our final web application used the Newspaper3k python library for webscraping. 
+In this project, we created a webscraping app using Flask to search for recent news articles on ocean plastic pollution.  The project provides background research for a California Benefit Corporation that is a pioneer in developing plastic offsets and reducing ocean plastic pollution.  In addition, we compared the accuracy of results and ease of use for different web scraping libraries and methods.  The different webscraping methods can be seen [here]( https://github.com/cmhume/ocean_plastic_webscraper/blob/93e065bfd33493f98eb600466b23fd544823ca08/scraping_draft_cmh.ipynb) in our webscraping google colab notebook.  Our final web application used the Newspaper3k python library for webscraping. 
 
 ## Sources of Data:
 
-The following websites were used as sources for scraping plastic pollution related news:
+The following websites are used as sources for scraping plastic pollution related news:
 
 
 1. https://news.un.org/
@@ -32,20 +32,20 @@ The following websites were used as sources for scraping plastic pollution relat
 
 ## Purpose:
 
-The purpose of this project is to collect and display information from multiple websites on a single web based application. Instead of manually browsing through multiple websites, the information from all of the sources will be available on the web application through the click of a button. The app will automatically navigate through the sites, scrape information and display the results in an easy to read table.
+The purpose of this project is to collect and display information from multiple websites on a single web based application. Instead of manually browsing through multiple websites, the information from all the sources is made available on the web application with the click of a button. The app will automatically navigate through the sites, scrape information and display the results in an easy to read table.
 
 ## Tools and Technologies:
 
-1. Newspaper3k: Newspaper3k is the python library that is used for extracting articles from URLs.
+1. Newspaper3k - The python library used for extracting articles from URLs.
 2. Python - Programming Language used to create the script to scrape data.
-3. MongoDB - a NoSQL DB has been used as a flexible option to store the many different types of data that is scraped from the websites in BSON format.
+3. MongoDB - A NoSQL DB is used as a flexible option to store the many different types of data that is scraped from the websites in BSON format.
 4. Flask- The web framework used to create the web application.
-5. Bootstrap - Bootstrap framework and its components have been used to build a flexible, mobile responsive web application. 
-6. CSS - Stylesheets have been used to design the appearance of the web application.
+5. Bootstrap - Bootstrap framework and its components are used to build a flexible, mobile responsive web application. 
+6. CSS - Stylesheets are used to design the appearance of the web application.
 
 ## Application Design:
 
-The following diagram illustrates the architecture and working of the web application.
+The following diagram illustrates the architecture and function of the web application.
 
 
 <img width="1097" alt="design" src="https://user-images.githubusercontent.com/78699521/143925266-cb4dd99b-1d36-4d1e-b695-801bd8a1ce23.png">
@@ -58,10 +58,10 @@ The following is an image of the developed web application.
 <img width="1439" alt="webapp" src="https://user-images.githubusercontent.com/78699521/143925079-98564677-2dad-423e-845c-8ce75afcd289.png">
 
 
-## Project Learnings and Challenges:
+## Project Insights and Challenges:
 
 1. The web page takes a little while to load and display the data after scraping.
-2. We decided on using the Newspaper3k library for it's ease of use and ability to add websites without needing to change the web scraping code.
+2. We decided to use the Newspaper3k library for it's ease of use and ability to add websites without needing to change the web scraping code.
 3. Certain websites (such as LinkedIn) did not return relevant results due to the design of the source websites and were removed as datasources.
 
 
@@ -171,10 +171,14 @@ We use the tabula library to scrape tables found in a pdf document.  The basic m
 
 
 !pip install tabula-py
-# Import Dependencies
+
+
 import tabula
+
+
 import os
-# read PDF file
+
+
 tables = tabula.read_pdf("/content/Brooks_aat0131_SM_L1.pdf", pages="all", output_format="dataframe", stream=True)
 
 
